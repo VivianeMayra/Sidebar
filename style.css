@@ -16,20 +16,19 @@ body {
     display: flex;
     overflow-y: hidden;
     background-color: var(--light-grey);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .sidebar {
     background-color: var(--green);
-    height: 650px;
+    width: 60px;
+    height: 100%;
     transition: 0.1s;
     overflow: hidden;
-    min-width: 1%;
 }
 
 /*Pseudo-classe: estado especial do elemento selecionado*/
 
-.sidebar.active,
 .sidebar:hover {
     width: 300px;
 }
@@ -48,12 +47,18 @@ body {
     list-style: none;
 }
 
+.sidebar ul li:hover {
+    background: #ea1d63;
+    width: 250px;
+}
+
 .sidebar ul li a {
     position: relative;
     width: 100%;
-    display: flex;
+    display: block;
     text-decoration: none;
     color: black;
+    display: flex;
 }
 
 .sidebar ul li a .icons {
@@ -88,6 +93,10 @@ span {
     display: none;
 }
 
+.sidebar:hover .title {
+    display: block;
+}
+
 .exit {
     margin-top: 35rem;
     background-color: var(--light-green);
@@ -102,9 +111,17 @@ span {
     display: none;
 }
 
+.sidebar:hover .img-avatar {
+    display: block;
+}
+
 .infos-block {
     margin: 20px 0px;
     display: none;
+}
+
+.sidebar:hover .infos-block {
+    display: block;
 }
 
 .infos-block h3 {
@@ -123,6 +140,7 @@ h1 {
     font-family: 'Poppins';
     font-weight: 500;
     margin: 1rem;
+
 }
 
 .logo {
